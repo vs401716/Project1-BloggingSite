@@ -15,6 +15,6 @@ const blogsSchema = new mongoose.Schema(
         isPublished: { type: Boolean, default: false },
     },
     { timestamps: true }
-);
+);    
 
 module.exports = mongoose.model('Blog', blogsSchema);

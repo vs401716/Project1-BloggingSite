@@ -13,3 +13,4 @@ mongoose.connect('mongodb+srv://shivamp2001:shivamp2001@mycluster.au9iv5p.mongod
 app.use('/', route)
 
 app.listen(3000, () => console.log('Express app is running on port 3000'));
+   

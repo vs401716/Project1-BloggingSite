@@ -3,7 +3,7 @@ const { isValidBody, isValidObjectId, isValidText } = require('../util/valitor.j
 
 //createBlog
 const createBlog = async (req, res) => {
-    try {
+    try {   
         const reqBody = req.body
         const { title, body, authorId, category } = reqBody;
 

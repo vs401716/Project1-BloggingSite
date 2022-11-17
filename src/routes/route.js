@@ -14,5 +14,5 @@ router.get('/blogs', authentication, getBlog)
 router.put('/blogs/:blogId', authentication, updateBlog)
 router.delete('/blogs/:blogId', authentication, deleteBlog)
 router.delete('/blogs', authentication, deletedByQuery)
-
+    
 module.exports = router;

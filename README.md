@@ -6,7 +6,7 @@ Repository for backend cohort - Lithium
 
 ## Blogging Site Mini Project Requirement
 
-## Phase I
+## Phase I     
 
 ### Models
 - Author Model

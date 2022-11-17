@@ -6,7 +6,7 @@ const { isValidBody, isValidEmail, isValidPass, isValidName, isValidTitleEnum } 
 const createAuthor = async (req, res) => {
     try {
         const reqBody = req.body;
-        const { fname, lname, title, email, password } = reqBody;
+        const { fname, lname, title, email, password } = reqBody;   
 
         if (!isValidBody(reqBody)) return res.status(400).send({ status: false, message: 'Please enter data.' });
         if (!fname) return res.status(400).send({ status: false, message: 'fname is required.' });

@@ -12,5 +12,8 @@ mongoose.connect('mongodb+srv://shivamp2001:shivamp2001@mycluster.au9iv5p.mongod
 
 app.use('/', route)
 
+app.use((req, res) => {
+    res.status(400).send({ status: false, message: 'Invalid URL' })
+})
+
 app.listen(3000, () => console.log('Express app is running on port 3000'));
-   

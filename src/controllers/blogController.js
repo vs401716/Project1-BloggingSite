@@ -12,6 +12,7 @@ const createBlog = async (req, res) => {
         if (!title) return res.status(400).send({ status: false, message: 'Please fill title.' })
         if (!body) return res.status(400).send({ status: false, message: 'Please fill body.' })
         if (!authorId) return res.status(400).send({ status: false, message: 'Please fill authorId.' })
+        if (!category) return res.status(400).send({ status: false, message: 'Please fill cateegory.' })
 
         if (!isValidText(title)) return res.status(400).send({ status: false, message: 'Enter valid title.' });
         if (!isValidText(body)) return res.status(400).send({ status: false, message: 'Enter valid body.' });

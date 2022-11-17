@@ -21,6 +21,9 @@ const createAuthor = async (req, res) => {
         if (!isValidEmail(email)) return res.status(400).send({ status: false, message: 'email is not valid.' });
         if (!isValidPass(password)) return res.status(400).send({ status: false, message: 'Password should be 8-15 char & use 0-9,A-Z,a-z & special char this combination.' });
 
+        const existUser = await authorModel.findOne({ email });
+        if (existUser) return res.status(401).send({ status: false, message: 'This email already registered.' });
+        
         const saveData = await authorModel.create(reqBody);
         return res.status(201).send({ status: true, data: saveData })
     }
